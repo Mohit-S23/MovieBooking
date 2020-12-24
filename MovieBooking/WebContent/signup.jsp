@@ -2,21 +2,24 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Movie Hub</title>
-</head>
-<body>
-
-	Password length must be between 6 to 18 characters.<br>
-	Password must contain an Uppercase letter.<br>
-	Password must contain a Lowercase letter.<br>
-	Password must contain a digit.<br>
-	Password must contain a special character.<br><br>
-	<form action="Create" method="post">
-		Set Username : <input type="text" name="uname"><br><br>
-		Set Password : <input type="password" name="pwd"><br><br>
-		<button type="submit" value="Create Account">Create Account</button>
-	</form>
-</body>
+	<head>
+		<link rel="stylesheet" href="signup.css">
+		<meta charset="ISO-8859-1">
+		<title>Movie Hub</title>
+	</head>
+	<body>
+		<div id="loginForm">
+			<div id="image">
+				<img src="user.jpg" id="left">
+			</div>
+			<div id="form">
+				<form action="Create" method="post" id="login">
+					<p id="heading">Sign Up</p><br>
+					<input type="text" name="uname" placeholder="Username"  class="modifiedInput" id="username" required><br><br>
+					<input type="password" name="pwd" placeholder="Password" class="modifiedInput" id="username" required><br><br>
+					<button type="submit" value="Create Account" id="signupButton">Create Account</button>
+				</form>
+			</div>	
+		</div>
+	</body>
 </html>

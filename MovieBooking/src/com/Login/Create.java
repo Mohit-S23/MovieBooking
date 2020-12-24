@@ -32,7 +32,7 @@ public class Create extends HttpServlet {
 		
 		if(userName == "" || password == "")
 		{
-			out.println("Username or Password cannot be empty");
+			
 		}
 		else if(lDao.isPresent(userName))
 		{

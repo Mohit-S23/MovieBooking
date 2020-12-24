@@ -14,9 +14,9 @@
 			</div>
 			<div id="form">
 				<form action="Login" method="post" id="login">			<!-- Calling Login servlet on clicking Login button -->
-					<p class="heading">Member Login</p><br>
-					<input type="text" name="userName" placeholder="Username" class="modifiedInput" id="username"><br><br>
-					<input type="password" name="password" placeholder="Password" class="modifiedInput" id="password"><br><br><br>
+					<p style="font-size:35px; font-weight:bold; margin-left:9%; margin-top:32%; font-family:verdana">User Log In</p><br>
+					<input type="text" name="userName" placeholder="Username" class="modifiedInput" id="username" required><br><br>
+					<input type="password" name="password" placeholder="Password" class="modifiedInput" id="password" required><br><br><br>
 					<button type="submit" value="Sign In" id="loginButton">LOGIN</button>
 				</form>
 				<br>
