@@ -20,14 +20,13 @@
 					<button type="submit" value="Sign In" id="loginButton">LOGIN</button>
 				</form>
 				<br>
-				<form>
+				<form action="ForgotPassword" method="post">
 					<button type="submit" value="forgot" id="forgot">Forgot Password?</button>
 				</form>
 				<form action="Signup" method="post">
 					<button type="submit" value="Sign Up" id="signupButton">Create your Account</button>
 				</form>
 			</div>
-			
 		</div>
 	</body>
 </html>

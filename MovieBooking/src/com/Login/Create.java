@@ -27,16 +27,18 @@ public class Create extends HttpServlet {
 		
 		String userName = request.getParameter("uname");		// getting username from signup form
 		String password = request.getParameter("pwd");			// getting password from signup form
+		String rePassword = request.getParameter("repwd");
 		
 		PrintWriter out = response.getWriter();
 		
-		if(userName == "" || password == "")
-		{
-			
-		}
-		else if(lDao.isPresent(userName))
+		
+		if(lDao.isPresent(userName))
 		{
 			out.println("Username already exists");
+		}
+		else if(!password.equals(rePassword))
+		{
+			out.println(password + " " + rePassword);
 		}
 		else
 		{

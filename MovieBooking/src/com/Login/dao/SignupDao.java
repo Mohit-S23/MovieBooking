@@ -8,10 +8,10 @@ import java.sql.ResultSet;
 public class SignupDao {
 	
 	String url = "jdbc:mysql://localhost:3306/moviebooking";
-	String query = "insert into logininfo value(?,?)";
 	
 	public void addDetails(String uname,String pwd)
 	{
+		String query = "insert into logininfo value(?,?)";
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,7 +24,24 @@ public class SignupDao {
 		catch (Exception e)
 		{
 			e.printStackTrace();
+		}	
+	}
+	
+	public void resetPassword(String uname,String pwd)
+	{
+		String query = "update logininfo set password=? where username=?";
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"mohit","Abcd@1234");
+			PreparedStatement st = con.prepareStatement(query);
+			st.setString(1, pwd);
+			st.setString(2, uname);
+			st.executeUpdate();
 		}
-		
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}	
 	}
 }
